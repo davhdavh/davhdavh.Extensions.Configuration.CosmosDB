@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+     <LangVersion>latest</LangVersion>
+
+     <PackageId>davhdavh.Extensions.Configuration.CosmosDB</PackageId>
+     <Version>1.0.1</Version>
+     <Authors>Dennis Haney</Authors>
+     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+     <Title>Cosmos DB as Configuration Store</Title>
+     <Copyright>Dennis Haney 2023</Copyright>
+     <PackageProjectUrl>https://github.com/davhdavh/davhdavh.Extensions.Configuration.CosmosDB</PackageProjectUrl>
+     <PackageReadmeFile>README.md</PackageReadmeFile>
+     <RepositoryUrl>https://github.com/davhdavh/davhdavh.Extensions.Configuration.CosmosDB</RepositoryUrl>
+     <PackageTags>cosmosdb,configuration</PackageTags>
+     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+     <IncludeSymbols>True</IncludeSymbols>
+     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+     <EnableNETAnalyzers>True</EnableNETAnalyzers>
+     <AnalysisLevel>6.0-all</AnalysisLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\davh\.nuget\packages\microsoft.azure.cosmos\3.32.1\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="LICENSE" />
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.32.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>
